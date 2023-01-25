@@ -1,15 +1,30 @@
 {
-  "name": "challengeW2CH3",
+  "name": "challengeW2ch3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    
     "husky": "^8.0.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
+
 }
+
+
+
