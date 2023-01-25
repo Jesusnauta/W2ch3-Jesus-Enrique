@@ -1,3 +1,4 @@
+<<<<<<< feature/firsttesting
 export const aLength = (arr) => {
   let i = 0;
   for (const n of arr) {
@@ -8,3 +9,6 @@ export const aLength = (arr) => {
 
   return i;
 };
+=======
+export const array = [1, 2, 3, 4, 5];
+>>>>>>> main
