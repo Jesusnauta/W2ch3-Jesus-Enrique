@@ -18,7 +18,6 @@ export const aMap = (array, number, Symbol) => {
       case "*":
         array[i] *= number;
         break;
-      case "/":
     }
   }
 };
@@ -32,4 +31,14 @@ export const arrayIndexOf = (array, value) => {
     }
   }
   return -1;
+};
+
+//include
+export const arrayIncludes = (array, value) => {
+  for (let i = 0; i < aLength(array); i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
 };

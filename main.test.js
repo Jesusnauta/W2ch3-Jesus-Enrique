@@ -1,4 +1,4 @@
-import { aLength, aMap, arrayIndexOf } from "./main";
+import { aLength, aMap, arrayIncludes, arrayIndexOf } from "./main";
 
 describe("Given an array of length 10", () => {
   test("Should be length of 10", () => {
@@ -33,6 +33,18 @@ describe("Given an arrayIndexOf", () => {
       expect(b).toBe(1);
       const c = arrayIndexOf(a, "Jirafa");
       expect(c).toBe(-1);
+    });
+  });
+});
+
+describe("Given an arrayInclude", () => {
+  describe("When we give a value", () => {
+    test("Then return true if the element is include", () => {
+      const a = ["cat", "dog", "bat"];
+      const b = arrayIncludes(a, "dog");
+      expect(b).toBe(true);
+      const c = arrayIncludes(a, "at");
+      expect(c).toBe(false);
     });
   });
 });
