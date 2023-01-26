@@ -1,4 +1,4 @@
-import { aLength } from "./main";
+import { aLength, aMap, arrayIndexOf } from "./main";
 
 describe("Given an array of length 10", () => {
   test("Should be length of 10", () => {
@@ -11,6 +11,28 @@ describe("Given an array of length 10", () => {
       const a = [];
       const r = aLength(a);
       expect(r).toBe(0);
+    });
+    describe("Given an array o length  [1, 4, 9, 16];", () => {
+      test("Should be length [2, 8, 18, 32", () => {
+        const a = [1, 4, 9, 16];
+        const b = 2;
+        const Symbol = "*";
+        const r = aMap(a, b, Symbol);
+        const expected = [2, 8, 18, 32];
+        expect(r).toEqual();
+      });
+    });
+  });
+});
+
+describe("Given an arrayIndexOf", () => {
+  describe("When we give a value", () => {
+    test("then return index of firts element equal to de value", () => {
+      const a = ["ant", "bison", "camel", "duck", "bison"];
+      const b = arrayIndexOf(a, "bison");
+      expect(b).toBe(1);
+      const c = arrayIndexOf(a, "Jirafa");
+      expect(c).toBe(-1);
     });
   });
 });
