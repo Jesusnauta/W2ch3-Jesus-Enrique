@@ -1,4 +1,5 @@
-import { aLength, aMap, arrayIncludes, arrayIndexOf } from "./main";
+import { aLength, aMap, arrayIncludes, arrayIndexOf } from ".";
+import * as m from "."; //para importar varias funciones sin tener que poner comas arriba.
 
 describe("Given an array of length 10", () => {
   test("Should be length of 10", () => {
